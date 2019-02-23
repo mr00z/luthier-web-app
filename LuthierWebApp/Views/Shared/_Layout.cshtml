@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                @Html.ActionLink("Guitar Heaven Luthier", "Index", "Home",null, new { @class = "navbar-brand" })
+            </div>
+            <ul id="navBar" class="nav navbar-nav navbar-right">
+                <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home" ? "active" : "")">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Guitars" ? "active" : "")">@Html.ActionLink("Guitars", "Index", "Guitars")</li>
+                @if (Session["user"] == null)
+                {
+                <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Customers" ? "active" : "")">@Html.ActionLink("Login", "Login", "Customers")</li>
+                }
+                else
+                {
+                    <li class="@(ViewContext.RouteData.Values["Action"].ToString() == "Account" ? "active" : "")">@Html.ActionLink("My Account", "Account", "Customers")</li>
+                    <li>@Html.ActionLink("Logout", "Logout", "Customers")</li>
+                }
+            </ul>
+        </div>
+    </nav>
+    <div class="container" style="min-height:66.3vh; padding-top: 5rem;">
+    @RenderBody()
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <section class="col-xs-12 col-sm-4">
+                    <h4>Contact details</h4>
+                    <address>
+                        <strong>Guitar Heaven, Inc.</strong><br>
+                        ul. Koszykowa 86<br>
+                        02-008 Warsaw<br>
+                        <abbr title="Phone">Phone:</abbr> 776-453-221
+                    </address>
+
+                    <address>
+                        <strong>Full Name</strong><br>
+                        <a href="mailto:#">first.last@example.com</a>
+                    </address>
+                </section>
+                <section class="col-xs-12 col-sm-4 col-sm-offset-4">
+                    <h4>Useful links</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Prices</a></li>
+                        <li><a href="#">About us</a></li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $('#slideButton').click(function (e) {
+            e.preventDefault();
+
+            var scrollto = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(scrollto).offset().top
+            }, 1200);
+        });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

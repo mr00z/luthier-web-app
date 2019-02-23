@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Authorize";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="text-align:center;">
+    <h2>You have to login to perform this action</h2> 
+
+    <div style="padding: 3rem;">
+    <a href="@Url.Action("Login", "Customers")" class="btn btn-success">
+        Login
+    </a>
+    <a href="@Url.Action("Create", "Customers")" class="btn btn-danger">
+        Register
+    </a>
+    </div>
+</div>
+

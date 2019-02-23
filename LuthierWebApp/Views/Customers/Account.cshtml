@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Account";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Account</h2>
+<br /><br />
+<div class="row" style="text-align:center;">
+    <div class="col-lg-6">
+        <article>
+            <a href="@Url.Action("Index", "Messages")"><img class="img-circle" src='@Url.Content("~//Content//img//message1.jpg")' alt="Message image" width="140" height="140"></a>
+            <h2>My messages</h2>
+        </article>
+    </div>
+    <div class="col-lg-6">
+        <article>
+            <a href="@Url.Action("Index", "Orders")"><img class="img-circle" src='@Url.Content("~//Content//img//order.jpg")' alt="Order image" width="140" height="140"></a>
+            <h2>My orders</h2>
+        </article>
+    </div>
+</div>

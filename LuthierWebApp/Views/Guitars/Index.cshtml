@@ -1,0 +1,44 @@
+﻿@model IEnumerable<LuthierWebApp.Models.Guitar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_SubPagesLayout.cshtml";
+}
+
+<h2 onload="changeActive2()">Guitars</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NrOfStrings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NrOfStrings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedAt)
+        </td>
+    </tr>
+}
+
+</table>

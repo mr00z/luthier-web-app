@@ -1,0 +1,83 @@
+﻿        .navbar {
+	      border: 0;
+	      border-radius: 0;
+	      margin-bottom: 0;
+	  }
+
+          .myheader{
+			background-image: url(img/guitar1.jpg);
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: #ffffff;
+			height: 95vh;
+		}
+
+            .customheader {
+                background-image: url(img/guitar2.jpg);
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: #ffffff;
+                height: 30em;
+            }
+            .messageheader{
+			background-image: url(img/message1.jpg);
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			color: #ffffff;
+			height: 30em;
+		}
+
+
+		.features .glyphicon{
+			font-size: 4em;
+			display: block;
+			text-align: center;
+		}
+
+		.features h2{
+			display: block;
+			text-align: center;
+		}
+
+		.features{
+			display: block;
+			text-align: justify;
+		}
+
+		.embed-responsive-map{
+        padding-top: 250px;
+      }
+	  footer{
+	  	background-color: black;
+	  	color: white;
+	  	padding-top: 0.5em;
+	  }
+
+		.marketing .col-lg-4 {
+		  margin-bottom: 1.5rem;
+		  text-align: center;
+		}
+		.marketing h2 {
+		  font-weight: normal;
+		}
+		.marketing .col-lg-4 p {
+		  margin-right: .75rem;
+		  margin-left: .75rem;
+		}
+
+		.featurette-divider {
+		  margin: 5rem 0; 
+		}
+
+		.featurette-heading {
+		  font-weight: 300;
+		  line-height: 1;
+		  letter-spacing: -.05rem;
+		}
+
