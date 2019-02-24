@@ -209,10 +209,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_SubPagesLayout.cshtml" />
-    <Content Include="Views\Guitars\Create.cshtml" />
-    <Content Include="Views\Guitars\Delete.cshtml" />
-    <Content Include="Views\Guitars\Details.cshtml" />
-    <Content Include="Views\Guitars\Edit.cshtml" />
     <Content Include="Views\Guitars\Index.cshtml" />
     <Content Include="Views\Messages\Create.cshtml" />
     <Content Include="Views\Messages\Delete.cshtml" />
